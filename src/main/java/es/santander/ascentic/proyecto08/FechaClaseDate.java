@@ -91,15 +91,15 @@ public class FechaClaseDate {
     public static void main(String[] args) {
 
         Date fechaHoy = new Date();
-        //System.out.println(" \n \n ");
+
         System.out.println("\nFecha de hoy y hora actual CET  "+fechaHoy);
-        System.out.println("\nFecha de hoy y hora actual CET  "+fechaHoy.toString());
         System.out.println("\nFecha de hoy y hora GMT (Greenwich) = UT (Universal Time)  "+fechaHoy.toGMTString());
         System.out.println("\nFecha de hoy y hora locales PM "+fechaHoy.toLocaleString());
         System.out.println("\nDía de la semana hoy: [0 domingo al 6 sábado] "+fechaHoy.getDay());
         System.out.println("\nDía del mes hoy: [0 al 30] "+fechaHoy.getDate());
         System.out.println("\nMes de hoy: [0 enero al 11 diciembre] "+fechaHoy.getMonth());
-        System.out.println("\nAño de hoy: [1900 al 1999] "+fechaHoy.getYear());
+        int annoGetYear = (int)fechaHoy.getYear();
+        System.out.println("\nAño de hoy: [1900 al 1999] "+(annoGetYear+1900));
         System.out.println("\nZona horaria: "+fechaHoy.getTimezoneOffset());
 
         TimeZone zonaHoraria = TimeZone.getDefault();
@@ -109,8 +109,6 @@ public class FechaClaseDate {
 
         FechaClaseDate fechaResultado = new FechaClaseDate();
         String fechaDefinitiva = fechaResultado.pasarFechaAString(fechaHoy);
-        System.out.println("La fecha actual es: "+fechaDefinitiva);
-        
+        System.out.println("La fecha actual es: "+fechaDefinitiva);      
     }
-
 }
