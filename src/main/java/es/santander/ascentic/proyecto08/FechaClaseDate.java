@@ -1,6 +1,7 @@
 package es.santander.ascentic.proyecto08;
 
 import java.util.Date;
+import java.util.TimeZone;
 
 public class FechaClaseDate {
     
@@ -100,6 +101,11 @@ public class FechaClaseDate {
         System.out.println("\nMes de hoy: [0 enero al 11 diciembre] "+fechaHoy.getMonth());
         System.out.println("\nAño de hoy: [1900 al 1999] "+fechaHoy.getYear());
         System.out.println("\nZona horaria: "+fechaHoy.getTimezoneOffset());
+
+        TimeZone zonaHoraria = TimeZone.getDefault();
+
+        System.out.println("Zona horaria: " + zonaHoraria.getDisplayName());
+        System.out.println("ID de la zona horaria: " + zonaHoraria.getID());
 
         FechaClaseDate fechaResultado = new FechaClaseDate();
         String fechaDefinitiva = fechaResultado.pasarFechaAString(fechaHoy);
